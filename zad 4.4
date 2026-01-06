@@ -1,0 +1,22 @@
+class Student:
+    liczba_studentow = 0
+
+    def __init__(self, imie, nazwisko, rok_studiow, srednia):
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.rok = rok_studiow
+        self.srednia = srednia
+
+        # zwiększamy licznik przy każdym utworzeniu obiektu
+        Student.liczba_studentow += 1
+
+
+    def pokaz_liczbe_studentow(cls):
+        print("Liczba studentów:", cls.liczba_studentow)
+
+    # metoda instancji - pokazuje dane studenta
+    def pokaz_dane(self):
+        print(f"Imię: {self.imie}")
+        print(f"Nazwisko: {self.nazwisko}")
+        print(f"Rok studiów: {self.rok}")
+        print(f"Średnia ocen: {self.srednia}")
